@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    ports:
+      - "11433:11433"
+    volumes:
+      - .:/workspace
+    environment:
+      - PYTHONPATH=/workspace
+    command: uvicorn app.main:app --host 0.0.0.0 --port 11433 --reload
+    networks:
+      - app-network
+
+  # Example database service (uncomment if needed)
+  # postgres:
+  #   image: postgres:16-alpine
+  #   environment:
+  #     POSTGRES_USER: appuser
+  #     POSTGRES_PASSWORD: apppassword
+  #     POSTGRES_DB: appdb
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   networks:
+  #     - app-network
+
+  # Example Redis service (uncomment if needed)
+  # redis:
+  #   image: redis:7-alpine
+  #   ports:
+  #     - "6379:6379"
+  #   networks:
+  #     - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+# volumes:
+#   postgres_data:
