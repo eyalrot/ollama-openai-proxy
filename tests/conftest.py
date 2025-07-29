@@ -257,12 +257,12 @@ def test_app():
 def test_client(test_app):
     """Create synchronous test client."""
     # Import here to avoid circular imports
-    from starlette.testclient import TestClient as StarletteClient
+    from fastapi.testclient import TestClient
 
-    # Create test client - using Starlette's TestClient directly
-    # which is what FastAPI uses under the hood
-    with StarletteClient(test_app) as client:
-        yield client
+    # Create test client - pass app as positional argument
+    client = TestClient(test_app)
+    yield client
+    client.close()
 
 
 @pytest.fixture

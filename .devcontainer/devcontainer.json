@@ -30,7 +30,9 @@
                 "esbenp.prettier-vscode",
                 "streetsidesoftware.code-spell-checker",
                 "donjayamanne.githistory",
-                "eamodio.gitlens"
+                "eamodio.gitlens",
+                "github.copilot",
+                "github.copilot-chat"
             ],
             "settings": {
                 "python.defaultInterpreterPath": "/usr/local/bin/python",
@@ -55,6 +57,22 @@
                     "bash": {
                         "path": "/usr/local/bin/bash-wrapper",
                         "args": []
+                    }
+                }
+            },
+            "mcp": {
+                "servers": {
+                    "serena": {
+                        "command": "/home/vscode/.cargo/bin/uv",
+                        "args": [
+                            "tool", 
+                            "run",
+                            "--from", 
+                            "git+https://github.com/oraios/serena.git",
+                            "serena-mcp-server",
+                            "--context", 
+                            "ide-assistant"
+                        ]
                     }
                 }
             }

@@ -25,7 +25,9 @@
       "Bash(mv:*)",
       "Bash(PYTHONPATH=/workspace python3 -c \"from references.ollama_types._types import Message, Options, Tool; print(''Successfully imported models!'')\")",
       "Bash(black:*)",
-      "Bash(flake8:*)"
+      "Bash(flake8:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(claude mcp:*)"
     ],
     "deny": []
   }

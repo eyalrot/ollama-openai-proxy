@@ -125,6 +125,9 @@ RUN npm install -g @anthropic-ai/claude-code && \
 # Upgrade pip and setuptools for Python 3.12
 RUN python3.12 -m pip install --upgrade pip setuptools wheel
 
+# Install uv package manager
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+
 # Copy custom bashrc and inputrc before switching user
 COPY .devcontainer/.bashrc /home/$USERNAME/.bashrc
 COPY .devcontainer/.inputrc /home/$USERNAME/.inputrc
@@ -144,7 +147,7 @@ WORKDIR /workspace
 
 # Set environment variables
 ENV PYTHONPATH=/workspace
-ENV PATH="/home/${USERNAME}/.local/bin:/home/${USERNAME}/.npm-global/bin:${PATH}"
+ENV PATH="/home/${USERNAME}/.cargo/bin:/home/${USERNAME}/.local/bin:/home/${USERNAME}/.npm-global/bin:${PATH}"
 ENV NODE_PATH="/home/${USERNAME}/.npm-global/lib/node_modules"
 # Ensure Python uses user site-packages by default
 ENV PYTHONUSERBASE=/home/${USERNAME}/.local
