@@ -57,6 +57,22 @@
                         "args": []
                     }
                 }
+            },
+            "mcp": {
+                "servers": {
+                    "serena": {
+                        "command": "/home/vscode/.cargo/bin/uv",
+                        "args": [
+                            "tool", 
+                            "run",
+                            "--from", 
+                            "git+https://github.com/oraios/serena.git",
+                            "serena-mcp-server",
+                            "--context", 
+                            "ide-assistant"
+                        ]
+                    }
+                }
             }
         }
     },

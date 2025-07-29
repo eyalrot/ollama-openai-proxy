@@ -3,25 +3,44 @@
 from contextlib import asynccontextmanager
 from typing import AsyncGenerator
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+from pydantic import ValidationError
 
 from app.config import settings
 from app.handlers.health import router as health_router
+from app.utils.errors import (
+    ProxyException, 
+    proxy_exception_handler as handle_proxy_exception,
+    validation_error_handler as handle_validation_error,
+    generic_exception_handler as handle_generic_exception
+)
+from app.utils.logging import get_logger
+from app.utils.middleware import LoggingMiddleware
+
+# Get logger (logging is already configured in utils/logging.py)
+logger = get_logger(__name__)
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     """Application lifespan manager."""
     # Startup
-    print(f"Starting {settings.app_name} v{settings.app_version}")
-    print(f"Environment: {settings.environment}")
-    print(f"Listening on {settings.host}:{settings.port}")
+    logger.info(
+        "application_starting",
+        app_name=settings.app_name,
+        app_version=settings.app_version,
+        environment=settings.environment,
+        host=settings.host,
+        port=settings.port,
+    )
 
     yield
 
     # Shutdown
-    print(f"Shutting down {settings.app_name}")
+    logger.info("application_shutting_down", app_name=settings.app_name)
 
 
 # Create FastAPI app instance
@@ -35,6 +54,19 @@ app = FastAPI(
     redoc_url="/redoc",
     lifespan=lifespan,
 )
+
+
+# Exception handlers
+app.add_exception_handler(ProxyException, handle_proxy_exception)
+
+
+app.add_exception_handler(RequestValidationError, handle_validation_error)
+app.add_exception_handler(ValidationError, handle_validation_error)
+app.add_exception_handler(Exception, handle_generic_exception)
+
+
+# Add logging middleware
+app.add_middleware(LoggingMiddleware)
 
 # Configure CORS middleware for development
 # TODO: Restrict origins for production deployment
