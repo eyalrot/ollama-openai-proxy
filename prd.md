@@ -43,6 +43,7 @@ The solution focuses on transparency and simplicity, following KISS and YAGNI pr
 - FR12: The service MUST extract and use Pydantic models from official Ollama SDK source
 - FR13: The service MUST collect and store real OpenAI API responses for test fixtures
 - FR14: OpenAI API key MUST be required for development phase response collection
+- FR15: Users MUST provide their own valid OpenAI API key via OPENAI_API_KEY environment variable for the proxy to function
 
 ### Non Functional
 
@@ -100,6 +101,7 @@ Single repository containing all proxy service code, tests, and documentation.
 - YAGNI principle - build only what stories specify
 - Pydantic v2 features used throughout
 - **Pre-commit hooks:** Can be temporarily disabled with `--no-verify` during development
+- **Configuration Migration:** Environment variables can be updated without code changes. Future versions may introduce configuration versioning if needed
 
 ## High-Level Requirements for Product Owner
 
@@ -133,6 +135,133 @@ The following high-level requirements outline what needs to be delivered for the
 - No DevContainer setup tasks required - already configured with Python 3.12
 - Pre-commit hooks can be skipped during rapid development
 - Final delivery must pass all coding standards and hooks
+
+## Epic Breakdown and Sequencing
+
+### Epic Overview
+
+The following epic structure provides a logical implementation sequence for the Ollama-OpenAI Proxy. Each epic builds upon the previous ones, following TDD principles and ensuring incremental value delivery.
+
+### Epic 1: SDK Type Extraction & Response Collection
+**Priority:** MUST DO FIRST  
+**Duration:** 1-2 days  
+**Purpose:** Extract Pydantic models from Ollama SDK and collect real OpenAI responses for accurate translation and testing.
+
+**Deliverables:**
+- Ollama SDK types extracted to `references/ollama-types/`
+- OpenAI response examples collected in `references/openai-examples/`
+- Extraction and collection scripts for future updates
+
+### Epic 2: Core Infrastructure & Testing Framework
+**Priority:** HIGH  
+**Duration:** 2-3 days  
+**Dependencies:** Epic 1  
+**Purpose:** Establish FastAPI application foundation and testing framework using Ollama SDK as client.
+
+**Deliverables:**
+- FastAPI application structure
+- Configuration management system
+- Structured logging setup
+- Test framework with Ollama SDK integration
+- Health check endpoint
+
+### Epic 3: Model Listing Endpoint (/api/tags)
+**Priority:** HIGH  
+**Duration:** 2 days  
+**Dependencies:** Epic 2  
+**Purpose:** Implement the simplest endpoint to prove the translation pattern works.
+
+**Deliverables:**
+- Working `/api/tags` endpoint
+- Model translation logic (OpenAI → Ollama format)
+- Integration tests with Ollama SDK
+
+### Epic 4: Text Generation Endpoint (/api/generate)
+**Priority:** HIGH  
+**Duration:** 3-4 days  
+**Dependencies:** Epic 2  
+**Purpose:** Implement the most complex endpoint with streaming support and parameter mapping.
+
+**Deliverables:**
+- Working `/api/generate` endpoint
+- Streaming and non-streaming support
+- Parameter mapping and translation
+- Warning logs for unsupported parameters
+
+### Epic 5: Chat Endpoint (/api/chat)
+**Priority:** HIGH  
+**Duration:** 2-3 days  
+**Dependencies:** Epic 2, benefits from Epic 4 streaming patterns  
+**Purpose:** Implement chat completion with message role mapping and conversation support.
+
+**Deliverables:**
+- Working `/api/chat` endpoint
+- Message role translation
+- Multi-turn conversation support
+- Streaming reused from Epic 4
+
+### Epic 6: Embeddings Endpoint (/api/embeddings)
+**Priority:** MEDIUM  
+**Duration:** 1-2 days  
+**Dependencies:** Epic 2  
+**Purpose:** Implement embeddings generation with batch support.
+
+**Deliverables:**
+- Working `/api/embeddings` endpoint
+- Single and batch embedding support
+- Proper response formatting
+
+### Epic 7: Error Handling & Edge Cases
+**Priority:** HIGH  
+**Duration:** 2 days  
+**Dependencies:** Epics 3-6  
+**Purpose:** Consolidate error handling and address edge cases across all endpoints.
+
+**Deliverables:**
+- Comprehensive error translation
+- Timeout handling
+- Rate limit response handling
+- Streaming error handling
+- Request tracking for debugging
+
+### Epic 8: Documentation & Deployment
+**Priority:** MEDIUM  
+**Duration:** 2 days  
+**Dependencies:** Epic 7  
+**Purpose:** Package the service for deployment with complete documentation.
+
+**Deliverables:**
+- API documentation (auto-generated and customized)
+- Deployment guides
+- Docker image and docker-compose
+- Troubleshooting documentation
+
+### Epic 9: Code Quality & Standards Verification
+**Priority:** HIGH  
+**Duration:** 1 day  
+**Dependencies:** All previous epics  
+**Purpose:** Final quality gate ensuring all standards are met before release.
+
+**Deliverables:**
+- All linting issues resolved
+- 80%+ test coverage achieved
+- Type checking passes
+- Pre-commit hooks working
+- Security scan completed
+
+### Epic Dependencies and Sequencing
+
+1. **Epic 1 MUST be completed first** - Without SDK types and OpenAI examples, accurate implementation is impossible
+2. **Epic 2 MUST be second** - All endpoints require the core infrastructure
+3. **Epics 3-6 can potentially run in parallel** after Epic 2, but recommended sequence:
+   - Epic 3 first (simplest, validates approach)
+   - Epic 4 next (most complex, establishes streaming)
+   - Epic 5 (reuses Epic 4 patterns)
+   - Epic 6 (simplest, no streaming)
+4. **Epic 7 consolidates after all endpoints** are complete
+5. **Epics 8-9 finalize the project** for production readiness
+
+**Note:** The Scrum Master will break down each epic into specific user stories during sprint planning.
 
 ## Checklist Results Report
 
