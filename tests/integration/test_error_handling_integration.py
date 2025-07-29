@@ -94,7 +94,7 @@ class TestErrorHandlingIntegration:
 
     @pytest.mark.skipif(
         True,
-        reason="Known issue with BaseHTTPMiddleware exception handling in test environment",
+        reason="Known issue with BaseHTTPMiddleware exception handling in test environment",  # noqa: E501
     )
     def test_generic_error_response(self, test_client):
         """Test generic error response format."""
