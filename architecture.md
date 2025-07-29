@@ -489,131 +489,17 @@ sequenceDiagram
     API-->>SDK: JSON response (Ollama format)
 ```
 
-## REST API Spec
+## REST API Specification
 
-```yaml
-openapi: 3.0.0
-info:
-  title: Ollama-OpenAI Proxy API
-  version: 1.0.0
-  description: Transparent proxy translating Ollama API calls to OpenAI
-servers:
-  - url: http://localhost:11434
-    description: Default Ollama port
+**Note:** The exact REST API specification will be discovered during Epic 1 (SDK Type Extraction) by analyzing the Ollama SDK source code. This ensures 100% compatibility with the expected request and response structures.
 
-paths:
-  /api/tags:
-    get:
-      summary: List available models
-      responses:
-        200:
-          description: List of models in Ollama format
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TagsResponse'
+During the SDK extraction phase, we will:
+1. Extract all Pydantic models from the Ollama SDK
+2. Document the exact request/response formats for each endpoint
+3. Identify all required and optional parameters
+4. Map parameter names and types between Ollama and OpenAI formats
 
-  /api/generate:
-    post:
-      summary: Generate text completion
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/GenerateRequest'
-      responses:
-        200:
-          description: Generated text
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GenerateResponse'
-              description: Non-streaming response
-            application/x-ndjson:
-              schema:
-                type: string
-                description: Newline-delimited JSON streaming response
-              example: |
-                {"model":"llama3.1","created_at":"2024-01-01T00:00:00Z","response":"The","done":false}
-                {"model":"llama3.1","created_at":"2024-01-01T00:00:01Z","response":" sky","done":false}
-                {"model":"llama3.1","created_at":"2024-01-01T00:00:02Z","response":" is","done":true,"context":[...],"total_duration":1000000000}
-
-  /api/chat:
-    post:
-      summary: Chat completion
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ChatRequest'
-      responses:
-        200:
-          description: Chat response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ChatResponse'
-              description: Non-streaming response
-            application/x-ndjson:
-              schema:
-                type: string
-                description: Newline-delimited JSON streaming response
-              example: |
-                {"model":"llama3.1","created_at":"2024-01-01T00:00:00Z","message":{"role":"assistant","content":"Hello"},"done":false}
-                {"model":"llama3.1","created_at":"2024-01-01T00:00:01Z","message":{"role":"assistant","content":" there"},"done":false}
-                {"model":"llama3.1","created_at":"2024-01-01T00:00:02Z","message":{"role":"assistant","content":"!"},"done":true,"total_duration":1000000000}
-
-  /api/embeddings:
-    post:
-      summary: Generate embeddings
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/EmbeddingsRequest'
-      responses:
-        200:
-          description: Embeddings response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/EmbeddingsResponse'
-
-  /health:
-    get:
-      summary: Health check
-      responses:
-        200:
-          description: Service is healthy
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                    enum: [healthy]
-
-components:
-  schemas:
-    # Note: Full schemas to be generated from Postman collection
-    GenerateRequest:
-      type: object
-      required: [model, prompt]
-      properties:
-        model:
-          type: string
-        prompt:
-          type: string
-        stream:
-          type: boolean
-          default: false
-        options:
-          type: object
-```
+This approach follows the TDD principle and ensures our implementation matches exactly what the Ollama SDK expects.
 
 ## Database Schema
 
@@ -707,8 +593,103 @@ ollama-openai-proxy/
 ├── requirements-dev.txt          # Development dependencies
 ├── pytest.ini                    # Pytest configuration
 ├── .gitignore
+├── Makefile                      # User-friendly commands (see below)
 └── README.md                     # Project overview
 ```
+
+### Directory Structure Notes
+
+**Validation:** This directory structure has been reviewed and validated for the project needs:
+
+1. **Clear separation of concerns** - Each component has its own module
+2. **Test organization** - Separate unit and integration test directories
+3. **Reference data isolation** - Non-production data clearly separated
+4. **Script organization** - All automation scripts in one location
+5. **Documentation centralization** - All docs in the docs/ folder
+
+**Key Points:**
+- The `app/` directory contains all production code
+- The `references/` directory is for development only (not deployed)
+- Scripts should be executable and have clear names
+- All Python packages must have `__init__.py` files
+- Test files follow the `test_*.py` naming convention
+
+### Makefile Requirements
+
+**Purpose:** Provide user-friendly commands for common development tasks.
+
+**Key Principle:** The Makefile MUST be created during Epic 1 and updated after EACH story completion to include new capabilities.
+
+**Initial Makefile targets (Epic 1):**
+```makefile
+.PHONY: help
+help:  ## Show this help message
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+
+.PHONY: extract-types
+extract-types:  ## Extract Pydantic models from Ollama SDK
+	python scripts/extract_sdk_types.py
+
+.PHONY: collect-responses
+collect-responses:  ## Collect OpenAI API responses (requires OPENAI_API_KEY)
+	python scripts/collect_openai_responses.py
+
+.PHONY: setup
+setup:  ## Initial project setup
+	pip install -r requirements-dev.txt
+	pre-commit install
+```
+
+**Progressive Makefile expansion per Epic:**
+
+- **Epic 2:** Add `test`, `test-unit`, `test-integration`, `lint`, `format`, `type-check`
+- **Epic 3:** Add `run`, `run-dev`, `test-tags`
+- **Epic 4:** Add `test-generate`, `test-streaming`
+- **Epic 5:** Add `test-chat`
+- **Epic 6:** Add `test-embeddings`
+- **Epic 7:** Add `test-all`, `coverage`
+- **Epic 8:** Add `build`, `docker-build`, `docker-run`, `docs`
+- **Epic 9:** Add `validate`, `pre-commit`, `clean`
+
+**Example expanded Makefile (by Epic 3):**
+```makefile
+.PHONY: run
+run:  ## Run the proxy server
+	uvicorn app.main:app --host 0.0.0.0 --port 11434
+
+.PHONY: run-dev
+run-dev:  ## Run in development mode with auto-reload
+	uvicorn app.main:app --host 0.0.0.0 --port 11434 --reload
+
+.PHONY: test
+test:  ## Run all tests
+	pytest -v
+
+.PHONY: test-unit
+test-unit:  ## Run unit tests only
+	pytest -v tests/unit/
+
+.PHONY: test-integration
+test-integration:  ## Run integration tests (requires OPENAI_API_KEY)
+	pytest -v tests/integration/
+
+.PHONY: lint
+lint:  ## Run linting checks
+	flake8 app/ tests/
+	mypy app/
+
+.PHONY: format
+format:  ## Format code with black
+	black app/ tests/
+```
+
+**Makefile Guidelines:**
+1. Each target must have a help description
+2. Use `.PHONY` for all non-file targets
+3. Group related commands together
+4. Add new targets immediately when new functionality is implemented
+5. Include clear error messages for missing dependencies
+6. Document environment variable requirements
 
 ## Infrastructure and Deployment
 
@@ -965,7 +946,23 @@ Simple flow for POC:
 
 ## Checklist Results Report
 
-*To be populated after architecture review*
+### Architecture Validation Summary
+
+**Date:** 2025-07-29  
+**Validated By:** Winston (Architect)  
+**Updates Made:**
+1. Removed REST API Spec section - Will be discovered during SDK extraction phase
+2. Validated directory structure - Clear separation of concerns confirmed
+3. Added Makefile requirements - Progressive enhancement approach defined
+
+**Key Architecture Decisions Validated:**
+- TDD approach with SDK extraction first
+- Monolithic service with clear internal separation
+- Stateless design for scalability
+- Progressive Makefile development for user experience
+- DevContainer-based development environment
+
+**Status:** Architecture document is aligned with PRD and ready for implementation.
 
 ## Next Steps
 
