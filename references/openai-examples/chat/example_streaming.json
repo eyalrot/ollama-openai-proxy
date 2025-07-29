@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "endpoint": "chat/completions",
+    "timestamp": "2025-07-29T08:30:00.000Z",
+    "request_params": {
+      "model": "gpt-3.5-turbo",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write a haiku about programming"
+        }
+      ],
+      "temperature": 0.8,
+      "stream": true
+    },
+    "note": "Streaming response captured as array of chunks"
+  },
+  "response_chunks": [
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": "Code"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": " flows"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": " like"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": " water\n"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": "Logic"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": " builds"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": " and"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": " creates\n"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": "Bugs"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": " hide"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": " in"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": " the"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": " shadows"
+          },
+          "logprobs": null,
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-stream123",
+      "object": "chat.completion.chunk",
+      "created": 1719947540,
+      "model": "gpt-3.5-turbo-0613",
+      "system_fingerprint": "fp_44709d6fcb",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {},
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ]
+    }
+  ],
+  "aggregated_response": {
+    "content": "Code flows like water\nLogic builds and creates\nBugs hide in the shadows",
+    "finish_reason": "stop"
+  }
+}

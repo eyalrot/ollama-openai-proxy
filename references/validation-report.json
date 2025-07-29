@@ -1,0 +1,1741 @@
+{
+  "timestamp": "2025-07-29T08:33:19.255970+00:00",
+  "summary": {
+    "total_checks": 423,
+    "passed": 423,
+    "failed": 0,
+    "warnings": 0
+  },
+  "endpoints": {
+    "models": {
+      "endpoint": "models",
+      "checks": [
+        {
+          "name": "has_object_field",
+          "passed": true
+        },
+        {
+          "name": "object_is_list",
+          "passed": true
+        },
+        {
+          "name": "has_data_field",
+          "passed": true
+        },
+        {
+          "name": "data_is_array",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        },
+        {
+          "name": "model_has_id",
+          "passed": true
+        },
+        {
+          "name": "model_has_object",
+          "passed": true
+        },
+        {
+          "name": "model_object_is_model",
+          "passed": true
+        },
+        {
+          "name": "model_has_created",
+          "passed": true
+        },
+        {
+          "name": "model_has_owned_by",
+          "passed": true
+        }
+      ],
+      "status": "pass"
+    },
+    "chat_completions": {
+      "endpoint": "chat/completions",
+      "checks": [
+        {
+          "name": "has_id",
+          "passed": true
+        },
+        {
+          "name": "has_object",
+          "passed": true
+        },
+        {
+          "name": "object_is_chat_completion",
+          "passed": true
+        },
+        {
+          "name": "has_created",
+          "passed": true
+        },
+        {
+          "name": "has_model",
+          "passed": true
+        },
+        {
+          "name": "has_choices",
+          "passed": true
+        },
+        {
+          "name": "choices_is_array",
+          "passed": true
+        },
+        {
+          "name": "has_usage",
+          "passed": true
+        },
+        {
+          "name": "choice_has_index",
+          "passed": true
+        },
+        {
+          "name": "choice_has_message",
+          "passed": true
+        },
+        {
+          "name": "choice_has_finish_reason",
+          "passed": true
+        },
+        {
+          "name": "message_has_role",
+          "passed": true
+        },
+        {
+          "name": "message_has_content",
+          "passed": true
+        },
+        {
+          "name": "usage_has_prompt_tokens",
+          "passed": true
+        },
+        {
+          "name": "usage_has_completion_tokens",
+          "passed": true
+        },
+        {
+          "name": "usage_has_total_tokens",
+          "passed": true
+        },
+        {
+          "name": "has_id",
+          "passed": true
+        },
+        {
+          "name": "has_object",
+          "passed": true
+        },
+        {
+          "name": "object_is_chat_completion",
+          "passed": true
+        },
+        {
+          "name": "has_created",
+          "passed": true
+        },
+        {
+          "name": "has_model",
+          "passed": true
+        },
+        {
+          "name": "has_choices",
+          "passed": true
+        },
+        {
+          "name": "choices_is_array",
+          "passed": true
+        },
+        {
+          "name": "has_usage",
+          "passed": true
+        },
+        {
+          "name": "choice_has_index",
+          "passed": true
+        },
+        {
+          "name": "choice_has_message",
+          "passed": true
+        },
+        {
+          "name": "choice_has_finish_reason",
+          "passed": true
+        },
+        {
+          "name": "message_has_role",
+          "passed": true
+        },
+        {
+          "name": "message_has_content",
+          "passed": true
+        },
+        {
+          "name": "usage_has_prompt_tokens",
+          "passed": true
+        },
+        {
+          "name": "usage_has_completion_tokens",
+          "passed": true
+        },
+        {
+          "name": "usage_has_total_tokens",
+          "passed": true
+        }
+      ],
+      "status": "pass"
+    },
+    "chat_completions_streaming": {
+      "endpoint": "chat/completions (streaming)",
+      "checks": [
+        {
+          "name": "chunk_has_id",
+          "passed": true
+        },
+        {
+          "name": "chunk_has_object",
+          "passed": true
+        },
+        {
+          "name": "chunk_object_is_chunk",
+          "passed": true
+        },
+        {
+          "name": "chunk_has_created",
+          "passed": true
+        },
+        {
+          "name": "chunk_has_model",
+          "passed": true
+        },
+        {
+          "name": "chunk_has_choices",
+          "passed": true
+        },
+        {
+          "name": "choice_has_index",
+          "passed": true
+        },
+        {
+          "name": "choice_has_delta",
+          "passed": true
+        },
+        {
+          "name": "choice_has_finish_reason",
+          "passed": true
+        }
+      ],
+      "status": "pass"
+    },
+    "embeddings": {
+      "endpoint": "embeddings",
+      "checks": [
+        {
+          "name": "has_object",
+          "passed": true
+        },
+        {
+          "name": "object_is_list",
+          "passed": true
+        },
+        {
+          "name": "has_data",
+          "passed": true
+        },
+        {
+          "name": "data_is_array",
+          "passed": true
+        },
+        {
+          "name": "has_model",
+          "passed": true
+        },
+        {
+          "name": "has_usage",
+          "passed": true
+        },
+        {
+          "name": "embedding_has_object",
+          "passed": true
+        },
+        {
+          "name": "embedding_object_is_embedding",
+          "passed": true
+        },
+        {
+          "name": "embedding_has_index",
+          "passed": true
+        },
+        {
+          "name": "embedding_has_embedding",
+          "passed": true
+        },
+        {
+          "name": "embedding_is_array",
+          "passed": true
+        },
+        {
+          "name": "usage_has_prompt_tokens",
+          "passed": true
+        },
+        {
+          "name": "usage_has_total_tokens",
+          "passed": true
+        }
+      ],
+      "status": "pass"
+    }
+  },
+  "compatibility_notes": [
+    "Ollama uses 'tags' endpoint while OpenAI uses 'models' endpoint",
+    "Ollama 'generate' endpoint maps to OpenAI 'chat/completions' endpoint",
+    "Ollama 'chat' endpoint has similar structure to OpenAI 'chat/completions'",
+    "Ollama 'embeddings' endpoint has similar structure to OpenAI 'embeddings'",
+    "Response streaming is supported by both APIs with similar chunk structure",
+    "Parameter mappings needed:",
+    "  - OpenAI 'model' -> Ollama 'model'",
+    "  - OpenAI 'temperature' -> Ollama 'options.temperature'",
+    "  - OpenAI 'max_tokens' -> Ollama 'options.num_predict'",
+    "  - OpenAI 'messages' -> Ollama 'messages' (chat) or 'prompt' (generate)",
+    "  - OpenAI 'stream' -> Ollama 'stream'"
+  ],
+  "overall_status": "PASS"
+}

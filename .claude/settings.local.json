@@ -14,7 +14,18 @@
       "Bash(ls:*)",
       "Bash(chmod:*)",
       "Bash(docker exec:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(pip install:*)",
+      "Bash(make:*)",
+      "Bash(python3:*)",
+      "Bash(git clone:*)",
+      "Bash(grep:*)",
+      "Bash(rm:*)",
+      "Bash(PYTHONPATH=/workspace python3 -c \"from references.ollama_types._types import Message; print(''Import successful'')\")",
+      "Bash(mv:*)",
+      "Bash(PYTHONPATH=/workspace python3 -c \"from references.ollama_types._types import Message, Options, Tool; print(''Successfully imported models!'')\")",
+      "Bash(black:*)",
+      "Bash(flake8:*)"
     ],
     "deny": []
   }

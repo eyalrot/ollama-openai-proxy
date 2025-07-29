@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "endpoint": "completions",
+    "timestamp": "2025-07-29T08:25:28.836906",
+    "request_params": {}
+  },
+  "response": {
+    "metadata": {
+      "endpoint": "completions",
+      "timestamp": "2025-07-29T08:25:28.836884",
+      "note": "The legacy completions endpoint has been deprecated by OpenAI. All text generation should use the chat completions API instead."
+    },
+    "migration_guide": {
+      "old_format": {
+        "endpoint": "/v1/completions",
+        "example": {
+          "model": "text-davinci-003",
+          "prompt": "Once upon a time",
+          "max_tokens": 50
+        }
+      },
+      "new_format": {
+        "endpoint": "/v1/chat/completions",
+        "example": {
+          "model": "gpt-3.5-turbo",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Once upon a time"
+            }
+          ],
+          "max_tokens": 50
+        }
+      }
+    }
+  }
+}

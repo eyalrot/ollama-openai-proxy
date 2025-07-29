@@ -1,0 +1,3 @@
+use the  bmad-scrum-master agent to handle story docs/stories/2.3.code-quality-tooling.md if checklist
+  pass assigned it to              bmad-devloper-agent and if  compoleted succesfully pass it the
+  bmad-qa-manager agent   3 agnets should be involved
