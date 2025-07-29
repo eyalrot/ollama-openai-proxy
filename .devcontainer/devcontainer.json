@@ -64,7 +64,6 @@
     "postCreateCommand": "pip install -e . 2>/dev/null || true && pre-commit install 2>/dev/null || true",
     "remoteUser": "vscode",
     "mounts": [
-        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
         "source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind,consistency=cached",
         "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
         "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached",
@@ -89,5 +88,7 @@
         "VSCODE_IPC_HOOK_CLI": "${localEnv:VSCODE_IPC_HOOK_CLI}",
         "CLAUDE_CODE_IN_DEVCONTAINER": "true"
     },
-    "postStartCommand": "bash -c 'source ~/.bashrc && stty sane && ln -sfn ~/.claude /workspace/.claude && echo Terminal configured successfully'"
+    "postStartCommand": "bash -c 'source ~/.bashrc && stty sane && ln -sfn ~/.claude /workspace/.claude && echo Terminal configured successfully'",
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
 }
