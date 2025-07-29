@@ -24,6 +24,7 @@ The solution focuses on transparency and simplicity, following KISS and YAGNI pr
 | 2024-01-26 | 1.0 | Initial PRD creation | Original Author |
 | 2024-01-26 | 2.0 | Converted to BMad template format | Sarah (PO) |
 | 2025-07-29 | 3.0 | Refactored to SDK-based TDD approach | Claude (PO) |
+| 2025-07-29 | 3.1 | Swapped Epic 4 & 5 - Chat endpoint before Generate | Sarah (PO) |
 
 ## Requirements
 
@@ -176,29 +177,29 @@ The following epic structure provides a logical implementation sequence for the 
 - Model translation logic (OpenAI → Ollama format)
 - Integration tests with Ollama SDK
 
-### Epic 4: Text Generation Endpoint (/api/generate)
-**Priority:** HIGH  
-**Duration:** 3-4 days  
-**Dependencies:** Epic 2  
-**Purpose:** Implement the most complex endpoint with streaming support and parameter mapping.
-
-**Deliverables:**
-- Working `/api/generate` endpoint
-- Streaming and non-streaming support
-- Parameter mapping and translation
-- Warning logs for unsupported parameters
-
-### Epic 5: Chat Endpoint (/api/chat)
+### Epic 4: Chat Endpoint (/api/chat)
 **Priority:** HIGH  
 **Duration:** 2-3 days  
-**Dependencies:** Epic 2, benefits from Epic 4 streaming patterns  
-**Purpose:** Implement chat completion with message role mapping and conversation support.
+**Dependencies:** Epic 2  
+**Purpose:** Implement chat completion with message role mapping, conversation support, and streaming capabilities.
 
 **Deliverables:**
 - Working `/api/chat` endpoint
 - Message role translation
 - Multi-turn conversation support
-- Streaming reused from Epic 4
+- Streaming and non-streaming support
+
+### Epic 5: Text Generation Endpoint (/api/generate)
+**Priority:** HIGH  
+**Duration:** 3-4 days  
+**Dependencies:** Epic 2, benefits from Epic 4 streaming patterns  
+**Purpose:** Implement text generation with streaming support and parameter mapping.
+
+**Deliverables:**
+- Working `/api/generate` endpoint
+- Streaming and non-streaming support (reusing patterns from Epic 4)
+- Parameter mapping and translation
+- Warning logs for unsupported parameters
 
 ### Epic 6: Embeddings Endpoint (/api/embeddings)
 **Priority:** MEDIUM  
@@ -255,8 +256,8 @@ The following epic structure provides a logical implementation sequence for the 
 2. **Epic 2 MUST be second** - All endpoints require the core infrastructure
 3. **Epics 3-6 can potentially run in parallel** after Epic 2, but recommended sequence:
    - Epic 3 first (simplest, validates approach)
-   - Epic 4 next (most complex, establishes streaming)
-   - Epic 5 (reuses Epic 4 patterns)
+   - Epic 4 next (chat with streaming, establishes patterns)
+   - Epic 5 (generate endpoint, reuses Epic 4 streaming patterns)
    - Epic 6 (simplest, no streaming)
 4. **Epic 7 consolidates after all endpoints** are complete
 5. **Epics 8-9 finalize the project** for production readiness
