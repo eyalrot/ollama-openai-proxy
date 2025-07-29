@@ -56,7 +56,9 @@ app = FastAPI(
 
 
 # Exception handlers
-app.add_exception_handler(ProxyException, handle_proxy_exception)
+app.add_exception_handler(
+    ProxyException, handle_proxy_exception  # type: ignore[arg-type]
+)
 
 
 app.add_exception_handler(RequestValidationError, handle_validation_error)

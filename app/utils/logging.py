@@ -2,7 +2,9 @@ import structlog
 import logging
 import sys
 import os
+from typing import Union
 from structlog.stdlib import BoundLogger
+from structlog.types import Processor
 
 
 def configure_logging(
@@ -26,7 +28,7 @@ def configure_logging(
 
     timestamper = structlog.processors.TimeStamper(fmt="iso")
 
-    shared_processors = [
+    shared_processors: list[Processor] = [
         structlog.contextvars.merge_contextvars,
         structlog.stdlib.filter_by_level,
         structlog.stdlib.add_logger_name,
@@ -40,7 +42,9 @@ def configure_logging(
 
     if environment == "development":
         # Colored output for development
-        formatter = structlog.dev.ConsoleRenderer()
+        formatter: Union[
+            structlog.dev.ConsoleRenderer, structlog.processors.JSONRenderer
+        ] = structlog.dev.ConsoleRenderer()
     else:
         # JSON output for production
         formatter = structlog.processors.JSONRenderer()
@@ -66,7 +70,7 @@ def configure_logging(
     root_logger.setLevel(getattr(logging, log_level.upper()))
 
     # Create and return logger
-    return structlog.get_logger()
+    return structlog.get_logger()  # type: ignore[no-any-return]
 
 
 def get_logger(name: str | None = None) -> BoundLogger:
@@ -78,7 +82,7 @@ def get_logger(name: str | None = None) -> BoundLogger:
     Returns:
         Configured logger instance
     """
-    return structlog.get_logger(name)
+    return structlog.get_logger(name)  # type: ignore[no-any-return]
 
 
 # Configure logging on module import
