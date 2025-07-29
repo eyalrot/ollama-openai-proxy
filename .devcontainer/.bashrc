@@ -125,6 +125,7 @@ alias dstart='docker start'
 
 # Python aliases
 alias py='python3'
+alias python='python3'
 alias pip='pip3'
 alias venv='python3 -m venv'
 alias activate='source venv/bin/activate'

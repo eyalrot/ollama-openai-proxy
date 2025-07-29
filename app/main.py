@@ -3,19 +3,18 @@
 from contextlib import asynccontextmanager
 from typing import AsyncGenerator
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
 from pydantic import ValidationError
 
 from app.config import settings
 from app.handlers.health import router as health_router
 from app.utils.errors import (
-    ProxyException, 
+    ProxyException,
     proxy_exception_handler as handle_proxy_exception,
     validation_error_handler as handle_validation_error,
-    generic_exception_handler as handle_generic_exception
+    generic_exception_handler as handle_generic_exception,
 )
 from app.utils.logging import get_logger
 from app.utils.middleware import LoggingMiddleware

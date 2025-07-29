@@ -30,7 +30,9 @@
                 "esbenp.prettier-vscode",
                 "streetsidesoftware.code-spell-checker",
                 "donjayamanne.githistory",
-                "eamodio.gitlens"
+                "eamodio.gitlens",
+                "github.copilot",
+                "github.copilot-chat"
             ],
             "settings": {
                 "python.defaultInterpreterPath": "/usr/local/bin/python",

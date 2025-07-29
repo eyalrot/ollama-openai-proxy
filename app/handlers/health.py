@@ -38,7 +38,7 @@ async def health_check() -> Dict[str, Any]:
         "environment": settings.environment,
         "timestamp": datetime.now(timezone.utc).isoformat(),
     }
-    
+
     logger.debug("health_check_requested", response=response)
-    
+
     return response
