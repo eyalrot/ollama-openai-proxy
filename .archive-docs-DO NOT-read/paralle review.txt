@@ -1,4 +1,6 @@
-run 3 bmad-qa-manager sub agents in paralel one subagents to handle
+run 3 bmad-qa-manager sub agents in parallel one subagents to handle
   docs/stories/1.1.sdk-type-extraction-setup.md one bmad-qa-manager subagent to handle
   docs/stories/1.2.openai-response-collection.md and one  one bmad-qa-manager subagent to handle
   docs/stories/1.3.type-validation-test-framework.md
+
+  create common QA_REVIEW_EPIC1.md

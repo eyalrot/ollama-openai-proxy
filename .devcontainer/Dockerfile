@@ -125,8 +125,7 @@ RUN npm install -g @anthropic-ai/claude-code && \
 # Upgrade pip and setuptools for Python 3.12
 RUN python3.12 -m pip install --upgrade pip setuptools wheel
 
-# Install uv package manager
-RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+# Note: uv will be installed as the vscode user later
 
 # Copy custom bashrc and inputrc before switching user
 COPY .devcontainer/.bashrc /home/$USERNAME/.bashrc
@@ -141,6 +140,9 @@ USER $USERNAME
 
 # Configure npm to use user directory for global packages
 RUN npm config set prefix '/home/vscode/.npm-global'
+
+# Install uv package manager as vscode user
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Set working directory
 WORKDIR /workspace

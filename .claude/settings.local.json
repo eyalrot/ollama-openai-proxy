@@ -27,7 +27,14 @@
       "Bash(black:*)",
       "Bash(flake8:*)",
       "WebFetch(domain:github.com)",
-      "Bash(claude mcp:*)"
+      "Bash(claude mcp:*)",
+      "Bash(claude:*)",
+      "mcp__serena__get_symbols_overview",
+      "mcp__serena__list_dir",
+      "mcp__serena__write_memory",
+      "mcp__serena__think_about_whether_you_are_done",
+      "mcp__serena__summarize_changes",
+      "mcp__serena__find_file"
     ],
     "deny": []
   }
